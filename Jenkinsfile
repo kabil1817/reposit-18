@@ -3,13 +3,14 @@ pipeline{
     stages{
         stage('version'){
             steps{
-                bat ' "c:\\Windows\\System32\\cmd.exe" /c python --version'
+                sh 'python3 --version'
             }
         }
         stage('hello'){
             steps{
-                bat ' "c:\\Windows\\System32\\cmd.exe" /c python demoxy.py'
+                sh 'python3 demoxy.py'
             }
         }
     }
+
 }
